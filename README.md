@@ -19,3 +19,5 @@
 * [SpringBoot访问数据库入门(JdbcTemplate和JPA)](./fall-love-in-springboot2.x/boot-datasource/SpringBoot访问数据库入门(JdbcTemplate和JPA).md)
 
 * [SpringBoot中单元测试、应用部署和监控](./fall-love-in-springboot2.x/boot-test-deploy)
+
+* [Netty源码剖析：Netty中服务端Channel的初始化过程](./netty-practice/README.md)
