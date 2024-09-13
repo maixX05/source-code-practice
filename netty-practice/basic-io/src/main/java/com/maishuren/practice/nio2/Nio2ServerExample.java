@@ -15,12 +15,12 @@ import java.util.concurrent.Executors;
  * @author maisrcn@qq.com
  * @since 2024-09-11
  */
-public class NioServerExample {
+public class Nio2ServerExample {
 
     private AsynchronousServerSocketChannel assc = null;
 
     public static void main(String[] args) throws IOException {
-        new NioServerExample().listen();
+        new Nio2ServerExample().listen();
     }
 
     void listen() throws IOException {
@@ -38,10 +38,10 @@ public class NioServerExample {
         }
     }
 
-    protected class AsyncAcceptHandler implements CompletionHandler<AsynchronousSocketChannel, NioServerExample> {
+    protected class AsyncAcceptHandler implements CompletionHandler<AsynchronousSocketChannel, Nio2ServerExample> {
 
         @Override
-        public void completed(AsynchronousSocketChannel clientChannel, NioServerExample attachment) {
+        public void completed(AsynchronousSocketChannel clientChannel, Nio2ServerExample attachment) {
             // 处理新连接
             System.out.println("新客户端连接：" + clientChannel);
             // 再次接受新连接
@@ -52,7 +52,7 @@ public class NioServerExample {
         }
 
         @Override
-        public void failed(Throwable exc, NioServerExample attachment) {
+        public void failed(Throwable exc, Nio2ServerExample attachment) {
             exc.printStackTrace();
         }
 
